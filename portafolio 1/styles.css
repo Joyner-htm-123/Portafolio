@@ -1,0 +1,138 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   ESTILO GENERAL
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* =========================
+   HEADER CON FLEXBOX
+========================= */
+header {
+    display: flex;
+    justify-content: space-between; /* separa nombre y menú */
+    align-items: center; /* centra verticalmente */
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+}
+
+/* Navegación */
+nav ul {
+    display: flex; /* flexbox aquí */
+    list-style: none;
+    gap: 20px; /* espacio entre links */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00c3ff;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* =========================
+   PROYECTOS CON GRID
+========================= */
+.proyectos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas de proyectos */
+.proyecto {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00c3ff;
+}
+
+/* =========================
+   GALERÍA FLEXBOX
+========================= */
+.galeria-flex {
+    display: flex;
+    flex-wrap: wrap; /* permite varias filas */
+    gap: 15px;
+    justify-content: center;
+}
+
+/* =========================
+   GALERÍA GRID (MOSAICO)
+========================= */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Tarjetas mascotas */
+.mascota {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Imágenes */
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
